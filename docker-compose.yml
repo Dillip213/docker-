@@ -1,0 +1,21 @@
+---
+version: "3.3"
+services:
+  myjenkins:
+   image: jenkins
+   ports:
+     - 5050:8080
+  qaserver:
+   image: jenkins
+   ports:
+     - 6060:8080
+   links:
+     - myjenks:jenkins
+  prodserver:
+   image: jenkins
+   ports:
+     - 7070:8080
+   links:
+    - myjenkins:jenkins
+
+    
