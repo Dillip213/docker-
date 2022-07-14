@@ -10,7 +10,7 @@ services:
    ports:
      - 6060:8080
    links:
-     - myjenks:jenkins
+     - myjenkins:jenkins
   prodserver:
    image: jenkins
    ports:
